@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
 
       <Head>
         <title>
-          Ecommerce
+          Petrolnaut Sound Design
         </title>
       </Head>
 

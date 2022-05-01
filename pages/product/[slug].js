@@ -10,7 +10,14 @@ const ProductDetails = ({ product, products }) => {
 
   const [index, setIndex] = useState(0); //we want to look at the first image
 
-  const { qty, increaseQty, decreaseQty, onAdd } = useStateContext();
+  const { qty, increaseQty, decreaseQty, onAdd, setShowCart } = useStateContext();
+  
+  //Handles our Buy Now button
+  const handleBuyNow = () => {
+    onAdd(product, qty);
+
+    setShowCart(true);
+  }
 
   return (
     <div>
@@ -27,8 +34,8 @@ const ProductDetails = ({ product, products }) => {
           <div className='small-images-container'>
             {image?.map((item, i) => (
               <img 
+                key={i}
                 src={urlFor(item)}
-
                 //if the current index is = to the index we want to see in detail, then we provide a small-image and selected-image class names. Else we just provide the small image.
                 className={i === index ? 'small-image selected-image' : 'small-image'}
                 onMouseEnter={() => setIndex(i)}
@@ -74,7 +81,7 @@ const ProductDetails = ({ product, products }) => {
               <span className='minus' onClick={decreaseQty}>
                 <AiOutlineMinus />
               </span>
-              <span className='num' onClick=''>
+              <span className='num'>
                 {qty}
               </span>
               <span className='plus' onClick={increaseQty}>
@@ -87,7 +94,7 @@ const ProductDetails = ({ product, products }) => {
             <button type='button' className='add-to-cart' onClick={() => onAdd(product, qty)}>
               Add to Cart
             </button>
-            <button type='button' className='buy-now' onClick=''>
+            <button type='button' className='buy-now' onClick={handleBuyNow}>
               Buy Now
             </button>
           </div>

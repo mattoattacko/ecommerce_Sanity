@@ -13,7 +13,7 @@ const Navbar = () => {
 
       <p className='logo'>
         <Link href='/'>
-          Ecommerce
+        Petrolnaut Sound Design
         </Link>
       </p>
 
