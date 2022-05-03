@@ -4,6 +4,7 @@ import { AiOutlineShopping } from 'react-icons/ai';
 import { Cart } from './';
 import { useStateContext } from '../context/StateContext';
 
+
 const Navbar = () => {
 
   const { showCart, setShowCart, totalQuantities } = useStateContext();
@@ -11,8 +12,11 @@ const Navbar = () => {
   return (
     <div className="navbar-container" >
 
+    {/* <img className='big-logo' src='/imageAssets/petrolnautSound.png' alt='logo' /> */}
       <p className='logo'>
+      
         <Link href='/'>
+        
         Petrolnaut Sound Design
         </Link>
       </p>
