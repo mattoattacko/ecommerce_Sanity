@@ -1,3 +1,5 @@
 ## Ecommerce - NextJS, Stripe, Sanity
 
-In association with JavaScript Mastery 
+<img src="https://imgur.com/DL9J9vD" />
+
+In association with JavaScript Mastery
