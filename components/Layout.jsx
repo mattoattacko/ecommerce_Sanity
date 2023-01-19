@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
 
       <Head>
         <title>
-          Petrolnaut Sound Design
+        Beat Heaven
         </title>
       </Head>
 

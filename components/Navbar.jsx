@@ -17,7 +17,7 @@ const Navbar = () => {
       
         <Link href='/'>
         
-        Petrolnaut Sound Design
+        Beat Heaven
         </Link>
       </p>
 
